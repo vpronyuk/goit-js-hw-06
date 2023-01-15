@@ -9,9 +9,11 @@ const ingredients = [
 
 const ulElem = document.getElementById("ingredients");
 
-for (const ingredient of ingredients) {
+const markup = ingredients.map((ingredient) => {
   const liElem = document.createElement("li");
   liElem.textContent = ingredient;
   liElem.className = "item";
-  ulElem.appendChild(liElem);
-}
+  return liElem;
+});
+
+ulElem.append(...markup);
