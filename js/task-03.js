@@ -13,12 +13,28 @@ const images = [
   },
 ];
 
-for (const image of images) {
-  console.log(image);
-  const liElem = document.createElement("li");
-  liElem.textContent = image.url;
-  // liElem.textContent = image.alt;
-  console.log(liElem);
-  // const listContent = images.map((image) => `<li>${image}</li>`).join("");
-  // console.log(listContent);
-}
+const imagesEl = document.querySelector(".gallery");
+
+const gallery = images
+  .map((img) => {
+    return `<li><img src=${img.url} alt=${img.alt} width = 100% height = 100%></img></li>`;
+  })
+  .join("");
+
+imagesEl.insertAdjacentHTML("afterbegin", gallery);
+
+const liEl = imagesEl.querySelectorAll("li");
+const imgEl = imagesEl.querySelectorAll("img");
+
+imagesEl.style.listStyle = "none";
+imagesEl.style.margin = 0;
+imagesEl.style.paddingLeft = 0;
+imagesEl.style.display = "flex";
+imagesEl.style.flexDirection = "column";
+imagesEl.style.alignItems = "center";
+imagesEl.style.gap = "3px";
+
+Array.from(liEl).map(
+  (el) => ((el.style.border = "3px dashed tomato"), (el.style.padding = "1px"))
+);
+Array.from(imgEl).map((el) => (el.style.display = "block"));
