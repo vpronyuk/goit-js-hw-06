@@ -30,11 +30,14 @@ imagesEl.style.listStyle = "none";
 imagesEl.style.margin = 0;
 imagesEl.style.paddingLeft = 0;
 imagesEl.style.display = "flex";
-imagesEl.style.flexDirection = "column";
-imagesEl.style.alignItems = "center";
-imagesEl.style.gap = "3px";
+imagesEl.style.justifyContent = "center";
+imagesEl.style.columnGap = "15px";
 
 Array.from(liEl).map(
-  (el) => ((el.style.border = "3px dashed tomato"), (el.style.padding = "1px"))
+  (el) => (
+    (el.style.border = "3px dashed tomato"),
+    (el.style.padding = "1px"),
+    (el.style.width = "calc((100% - 90px) / 3)")
+  )
 );
 Array.from(imgEl).map((el) => (el.style.display = "block"));

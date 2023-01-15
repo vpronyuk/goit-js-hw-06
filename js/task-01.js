@@ -3,6 +3,7 @@ const categoriesCounter = categories.childElementCount;
 console.log(`Number of categories: ${categoriesCounter}`);
 
 const headersText = document.querySelectorAll(".item");
+
 for (const headerText of headersText) {
   console.log(`Category: ${headerText.firstElementChild.textContent}`);
 
