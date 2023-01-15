@@ -1,6 +1,6 @@
 const categories = document.getElementById("categories");
 const categoriesCounter = categories.childElementCount;
-console.log(`Number of categories: ${categoriesCounter}\n`);
+console.log(`Number of categories: ${categoriesCounter}`);
 
 const headersText = document.querySelectorAll(".item");
 for (const headerText of headersText) {
@@ -8,6 +8,6 @@ for (const headerText of headersText) {
 
   const subLiElem = headerText.querySelectorAll("ul");
   for (const liElem of subLiElem) {
-    console.log(`Elements: ${liElem.childElementCount}\n`);
+    console.log(`Elements: ${liElem.childElementCount}`);
   }
 }
