@@ -1,4 +1,5 @@
 const symbolInput = document.getElementById("validation-input");
+
 const requiredLength = symbolInput.getAttribute("data-length");
 
 symbolInput.addEventListener("blur", symbolCounter);

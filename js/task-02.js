@@ -13,6 +13,7 @@ const markup = ingredients.map((ingredient) => {
   const liElem = document.createElement("li");
   liElem.textContent = ingredient;
   liElem.className = "item";
+
   return liElem;
 });
 
